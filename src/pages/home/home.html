@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar >
+    <ion-title text-center>
+      Ionic - alfa
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button full color="light" (click)="showAlert()">Alunos</button>
+  <ion-list>
+    <button ion-item *ngFor="let w of wall" (click)="descricao(w.id)">      
+      <ion-card>
+          <img src="{{ w.imagem }}">
+          <ion-card-content> 
+            <ion-card-title>
+                {{w.nome}}
+            </ion-card-title>
+          </ion-card-content>    
+        </ion-card>  
+    </button> 
+  </ion-list>
+  
+</ion-content>
